@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Arya Sikharam — A Gateway to Vizag | Premium Residences, Paradesipalem</title>
+<meta name="description" content="Arya Sikharam — 2 & 3 BHK luxury apartments in Paradesipalem, Visakhapatnam. RERA P03280022275. A gateway to new Vizag."/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yellowtail&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,600&family=Inter:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ── RESET & TOKENS ── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  /* warmer, slightly lighter dark base with purple undertone */
+  --ink:#130F1E;--ink2:#1D1730;--ink3:#27203E;
+  --white:#FAF7F5;--white2:#EDE8E3;
+  /* brand pink — rose/magenta from logo */
+  --pink:#C94F7B;--pink-l:#F0A0C0;--pink-d:#7D2449;
+  --pink-glow:rgba(201,79,123,.18);
+  /* gold kept for premium accents */
+  --gold:#C9A96E;--gold2:#E8D4A0;--gold3:#8B6828;
+  /* bay teal kept for stats/marquee */
+  --bay:#0A4F6E;--bay2:#0E7490;--bay3:#06B6D4;
+  --sand:#D4A855;--sand2:#F0C96A;
+  --muted:#8A8292;--muted2:#55506A;
+  /* Northwell-style = Great Vibes for display; Cormorant for body serif */
+  --script:'Yellowtail',cursive;
+  --serif:'Cormorant Garamond',Georgia,serif;
+  --sans:'Inter',-apple-system,sans-serif;
+  --ease:cubic-bezier(0.25,0.46,0.45,0.94);
+  --spring:cubic-bezier(0.16,1,0.3,1);
+}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--white);font-family:var(--sans);font-weight:300;overflow-x:hidden;cursor:none}
+a{color:inherit;text-decoration:none}
+img{display:block;width:100%;height:100%;object-fit:cover}
+button,input,select,textarea{font-family:inherit}
+
+/* ── CURSOR ── */
+#cx,#cy{position:fixed;top:0;left:0;pointer-events:none;z-index:9999;border-radius:50%;transform:translate(-50%,-50%)}
+#cx{width:8px;height:8px;background:var(--gold);transition:transform .15s,opacity .15s}
+#cy{width:40px;height:40px;border:1px solid rgba(201,169,110,.5);transition:transform .25s var(--ease),opacity .25s}
+#cy.big{transform:translate(-50%,-50%) scale(2.5);opacity:.2}
+#cy.hide{opacity:0}
+@media(hover:none){#cx,#cy{display:none}body{cursor:auto}}
+
+/* ── LOADER (video) ── */
+#ld{position:fixed;inset:0;z-index:10000;background:#000;display:flex;align-items:center;justify-content:center;overflow:hidden;transition:opacity 1.2s ease,visibility 1.2s ease}
+#ld.out{opacity:0;visibility:hidden;pointer-events:none}
+#ld-vid{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+/* fallback overlay if video fails */
+.ld-fallback{position:absolute;inset:0;display:none;align-items:center;justify-content:center;flex-direction:column;background:var(--ink)}
+.ld-fallback-name{font-family:var(--script);font-size:90px;color:var(--pink-l);animation:ldfb 1.5s var(--spring) forwards}
+@keyframes ldfb{from{opacity:0;transform:scale(.8)}to{opacity:1;transform:scale(1)}}
+@keyframes fdin{to{opacity:1}}
+
+/* ── NAV ── */
+nav{position:fixed;top:0;left:0;right:0;z-index:1000;padding:30px 64px;display:flex;align-items:center;justify-content:space-between;transition:padding .5s,background .5s,border .5s}
+nav.s{background:rgba(11,14,26,.93);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);padding:14px 64px;border-bottom:1px solid rgba(201,169,110,.08)}
+.logo{display:flex;flex-direction:column;gap:1px}
+.logo-a{font-family:var(--serif);font-size:26px;font-weight:500;letter-spacing:9px;color:var(--white);line-height:1}
+.logo-b{font-size:8px;letter-spacing:4.5px;text-transform:uppercase;color:var(--pink-l)}
+.nav-r{display:flex;align-items:center;gap:38px}
+.nav-links{list-style:none;display:flex;align-items:center;gap:38px}
+.nav-links a{font-size:10.5px;font-weight:400;letter-spacing:2px;text-transform:uppercase;color:rgba(247,245,240,.5);transition:color .3s;position:relative}
+.nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:1px;background:var(--pink-l);transition:width .3s var(--ease)}
+.nav-links a:hover{color:var(--white)}
+.nav-links a:hover::after{width:100%}
+.nav-enq{padding:10px 26px;border:1px solid var(--pink);color:var(--pink-l);font-size:10px;font-weight:500;letter-spacing:2px;text-transform:uppercase;transition:all .3s}
+.nav-enq:hover{background:var(--pink);color:var(--white)}
+.nav-burger{display:none;flex-direction:column;gap:5px}
+.nav-burger span{display:block;width:26px;height:1px;background:var(--white);transition:all .3s}
+
+/* ── MOB MENU ── */
+.mob{position:fixed;inset:0;background:var(--ink);z-index:998;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:32px;transform:translateX(100%);transition:transform .6s var(--spring)}
+.mob.open{transform:none}
+.mob a{font-family:var(--serif);font-size:clamp(42px,9vw,64px);font-weight:300;color:var(--white);transition:color .3s}
+.mob a:hover{color:var(--gold)}
+.mob-x{position:absolute;top:28px;right:32px;font-size:28px;color:var(--white);cursor:none}
+
+/* ── HERO ── */
+#hero{position:relative;height:100vh;min-height:680px;overflow:hidden}
+.hero-bg-wrap{position:absolute;inset:0;overflow:hidden}
+.hero-bg{width:100%;height:100%;object-fit:cover;object-position:center 40%;transform:scale(1.04);transition:transform 9s ease-out}
+.hero-bg.k{transform:scale(1)}
+/* gradient: let building breathe, darken bottom for text */
+.hero-grade{position:absolute;inset:0;background:
+  linear-gradient(to bottom,rgba(11,14,26,.22) 0%,rgba(11,14,26,.04) 28%,rgba(11,14,26,.1) 55%,rgba(11,14,26,.88) 80%,rgba(11,14,26,.98) 100%),
+  linear-gradient(100deg,rgba(11,14,26,.55) 0%,transparent 50%)}
+.hero-cnt{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:0 64px 80px}
+.hero-tag{display:flex;align-items:center;gap:12px;margin-bottom:20px;opacity:0;transform:translateY(18px)}
+.hero-tag-line{width:36px;height:1px;background:var(--gold)}
+.hero-tag-t{font-size:9.5px;letter-spacing:5px;text-transform:uppercase;color:var(--pink-l);font-weight:500}
+.hero-h1{font-family:var(--serif);font-size:clamp(60px,9.5vw,136px);font-weight:300;line-height:.88;color:var(--white);letter-spacing:-1px;margin-bottom:28px;opacity:0}
+.hero-h1 .it{font-style:italic;color:var(--pink-l)}
+.hero-h1 .out{color:transparent;-webkit-text-stroke:1px rgba(247,245,240,.5);font-style:italic}
+/* Northwell-style script headline */
+.hero-script{font-family:var(--script);font-size:clamp(72px,12vw,160px);color:var(--pink-l);line-height:.85;display:block;opacity:0;text-shadow:0 0 60px rgba(201,79,123,.35)}
+.hero-sub{font-size:15px;font-weight:300;color:rgba(247,245,240,.55);max-width:480px;line-height:1.9;margin-bottom:44px;opacity:0;transform:translateY(16px)}
+.hero-btns{display:flex;gap:16px;opacity:0;transform:translateY(16px)}
+.btn-gold{display:inline-flex;align-items:center;gap:10px;padding:16px 40px;background:linear-gradient(135deg,var(--pink),var(--pink-d));color:var(--white);font-size:9.5px;font-weight:600;letter-spacing:3px;text-transform:uppercase;overflow:hidden;position:relative;transition:color .35s;box-shadow:0 4px 24px rgba(201,79,123,.35)}
+.btn-gold::after{content:'';position:absolute;inset:0;background:var(--white);transform:scaleX(0);transform-origin:left;transition:transform .4s var(--ease);z-index:0}
+.btn-gold:hover::after{transform:scaleX(1)}
+.btn-gold:hover{color:var(--pink)}
+.btn-gold span,.btn-gold svg{position:relative;z-index:1}
+.btn-out{display:inline-flex;align-items:center;gap:10px;padding:16px 40px;border:1px solid rgba(240,160,192,.3);color:var(--pink-l);font-size:9.5px;letter-spacing:3px;text-transform:uppercase;transition:all .3s}
+.btn-out:hover{border-color:var(--pink-l);color:var(--white);background:rgba(201,79,123,.08)}
+/* hero side stats */
+.hero-stats{position:absolute;right:64px;bottom:80px;display:flex;flex-direction:column;gap:20px;opacity:0;text-align:right}
+.hstat-n{font-family:var(--serif);font-size:48px;font-weight:300;color:var(--white);line-height:1}
+.hstat-n sup{font-size:20px;color:var(--pink-l)}
+.hstat-l{font-size:8.5px;letter-spacing:3px;text-transform:uppercase;color:rgba(240,160,192,.7);margin-top:2px}
+/* hero scroll */
+.hero-scroll{position:absolute;bottom:36px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;opacity:0}
+.hero-scroll span{font-size:8.5px;letter-spacing:4px;text-transform:uppercase;color:rgba(247,245,240,.35)}
+.scrl{width:1px;height:50px;background:linear-gradient(to bottom,rgba(201,169,110,.6),transparent);animation:sc 2s ease-in-out infinite}
+@keyframes sc{0%,100%{transform:scaleY(1);opacity:.8}50%{transform:scaleY(.45);opacity:.25}}
+/* hero rera badge */
+.hero-rera{position:absolute;top:110px;right:64px;padding:8px 16px;border:1px solid rgba(201,79,123,.25);background:rgba(19,15,30,.65);backdrop-filter:blur(8px);font-size:9px;letter-spacing:2.5px;text-transform:uppercase;color:var(--pink-l);opacity:0}
+
+/* ── MARQUEE ── */
+.mqbar{background:var(--bay);padding:13px 0;overflow:hidden;border-top:1px solid rgba(6,182,212,.15);border-bottom:1px solid rgba(6,182,212,.15)}
+.mq-tr{display:flex;animation:mqanim 32s linear infinite}
+.mq-it{display:flex;align-items:center;gap:26px;padding:0 26px;font-size:9px;letter-spacing:4px;text-transform:uppercase;color:rgba(6,182,212,.8);white-space:nowrap;font-weight:500}
+.mq-dt{width:3px;height:3px;background:var(--bay3);border-radius:50%;flex-shrink:0}
+@keyframes mqanim{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ── STAT BAND ── */
+.sband{background:linear-gradient(135deg,var(--pink-d) 0%,var(--ink2) 40%,var(--bay) 100%);padding:64px}
+.sband-g{max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(255,255,255,.06)}
+.sb{background:rgba(0,0,0,.2);padding:44px 32px;text-align:center;backdrop-filter:blur(4px);transition:background .3s}
+.sb:hover{background:rgba(255,255,255,.06)}
+.sb-n{font-family:var(--serif);font-size:60px;font-weight:300;line-height:1;margin-bottom:8px;background:linear-gradient(135deg,#fff 30%,var(--gold2) 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.sb-l{font-size:9px;letter-spacing:3.5px;text-transform:uppercase;color:rgba(247,245,240,.4);font-weight:400}
+
+/* ── SECTION UTILS ── */
+.sec{padding:110px 64px}
+.w{max-width:1280px;margin:0 auto}
+.ey{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+.ey::before{content:'';width:30px;height:1px;background:var(--pink);flex-shrink:0}
+.ey-t{font-size:9.5px;letter-spacing:5px;text-transform:uppercase;color:var(--pink-l);font-weight:500}
+/* section headings — Cormorant for body serif, script accent for italic em */
+.sh{font-family:var(--serif);font-size:clamp(40px,5vw,76px);font-weight:300;line-height:1;color:var(--white);margin-bottom:14px}
+.sh em{font-family:var(--script);font-style:normal;font-weight:400;color:var(--pink-l);font-size:1.25em;line-height:.85}
+.sd{font-size:14.5px;font-weight:300;color:var(--muted);line-height:1.9;max-width:540px}
+.gd{width:56px;height:1px;background:linear-gradient(to right,var(--pink),transparent);margin:20px 0}
+
+/* ── PROJECT FEATURED ── */
+#feat{padding:0 0 110px;background:var(--ink2)}
+/* Full bleed building hero */
+.feat-hero{position:relative;height:90vh;overflow:hidden}
+.feat-hero img{object-position:center 60%}
+.feat-grade{position:absolute;inset:0;background:
+  linear-gradient(to top,rgba(11,14,26,1) 0%,rgba(11,14,26,.55) 25%,rgba(11,14,26,.12) 55%,rgba(10,79,110,.18) 80%,rgba(11,14,26,.2) 100%)}
+.feat-cnt{position:absolute;bottom:0;left:0;right:0;padding:0 64px 64px;max-width:1280px}
+.feat-badge{display:inline-flex;align-items:center;gap:9px;padding:8px 18px;border:1px solid rgba(201,79,123,.35);background:rgba(201,79,123,.09);margin-bottom:26px}
+.feat-badge-dot{width:7px;height:7px;border-radius:50%;background:var(--pink-l);animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+.feat-badge-t{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--pink-l);font-weight:500}
+.feat-title{font-family:var(--serif);font-size:clamp(48px,7vw,96px);font-weight:300;line-height:.95;color:var(--white)}
+.feat-title em{display:block;font-family:var(--script);font-style:normal;font-weight:400;color:var(--pink-l);font-size:1.5em;line-height:.8;text-shadow:0 0 50px rgba(201,79,123,.4)}
+.feat-loc{display:flex;align-items:center;gap:8px;margin:18px 0 24px;font-size:10.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted)}
+.feat-tagline{font-family:var(--serif);font-size:clamp(18px,2.5vw,28px);font-style:italic;color:rgba(247,245,240,.5);margin-bottom:36px;max-width:560px;line-height:1.4}
+.feat-specs{display:inline-flex;gap:1px;background:rgba(201,169,110,.12);border:1px solid rgba(201,169,110,.12);margin-bottom:44px}
+.feat-spec{background:rgba(11,14,26,.85);padding:18px 28px;backdrop-filter:blur(8px)}
+.feat-spec-v{font-family:var(--serif);font-size:28px;font-weight:400;color:var(--white);line-height:1;margin-bottom:4px}
+.feat-spec-l{font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold)}
+.feat-btns{display:flex;gap:14px}
+
+/* building gallery row */
+.brow{display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;margin-top:3px}
+.brow-item{position:relative;overflow:hidden}
+.brow-item img{aspect-ratio:4/3;object-fit:cover;object-position:center;transition:transform .9s var(--ease);filter:brightness(.9)}
+.brow-item:hover img{transform:scale(1.05);filter:brightness(1)}
+.brow-caption{position:absolute;bottom:0;left:0;right:0;padding:18px 20px;background:linear-gradient(to top,rgba(11,14,26,.85),transparent);font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);opacity:0;transition:opacity .4s}
+.brow-item:hover .brow-caption{opacity:1}
+
+/* ── UNIT PLANS ── */
+#units{background:var(--ink)}
+.units-layout{display:grid;grid-template-columns:280px 1fr;gap:64px;align-items:start;margin-top:56px}
+.units-tabs{display:flex;flex-direction:column;gap:3px;position:sticky;top:100px}
+.utab{padding:18px 22px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.04);cursor:none;transition:all .3s;text-align:left}
+.utab:hover{background:rgba(201,169,110,.04);border-color:rgba(201,169,110,.1)}
+.utab.act{background:rgba(201,79,123,.07);border-color:var(--pink);border-left:3px solid var(--pink)}
+.utab-type{font-size:8.5px;letter-spacing:3px;text-transform:uppercase;color:var(--pink-l);margin-bottom:5px}
+.utab-name{font-family:var(--serif);font-size:20px;color:var(--white)}
+.utab-sqft{font-size:12px;color:var(--muted);margin-top:3px}
+.unit-display{position:relative}
+.uplan{display:none}
+.uplan.act{display:block}
+.uplan img{width:100%;border:1px solid rgba(255,255,255,.04)}
+.uplan-meta{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(201,169,110,.08);margin-top:3px}
+.upm{background:var(--ink);padding:18px 20px}
+.upm-v{font-family:var(--serif);font-size:24px;color:var(--white);margin-bottom:3px}
+.upm-l{font-size:8px;letter-spacing:2.5px;text-transform:uppercase;color:var(--pink-l)}
+
+/* ── FLOOR PLANS ── */
+#floorplans{background:var(--ink2)}
+.fp-tabs{display:flex;gap:2px;margin-top:44px;margin-bottom:3px}
+.fptab{padding:12px 28px;background:rgba(255,255,255,.02);border:1px solid rgba(255,255,255,.04);cursor:none;font-size:9.5px;letter-spacing:2.5px;text-transform:uppercase;color:var(--muted);transition:all .3s}
+.fptab.act,.fptab:hover{background:rgba(201,169,110,.06);border-color:var(--gold);color:var(--gold)}
+.fpplan{display:none}
+.fpplan.act{display:block}
+.fpplan img{width:100%;border:1px solid rgba(255,255,255,.04)}
+
+/* ── AMENITIES ── */
+#amen{background:var(--ink)}
+.amen-spread{position:relative;margin-top:56px;overflow:hidden}
+.amen-img{width:100%;aspect-ratio:21/9;object-fit:cover;object-position:center;filter:brightness(.7)}
+.amen-ov{position:absolute;inset:0;background:linear-gradient(to right,rgba(11,14,26,.85) 0%,rgba(11,14,26,.2) 50%,rgba(11,14,26,.2) 100%)}
+.amen-txt{position:absolute;top:50%;left:64px;transform:translateY(-50%);max-width:380px}
+.amen-txt .sh{font-size:clamp(36px,4vw,60px)}
+.amen-list{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;margin-top:3px}
+.amen-card{background:var(--ink2);padding:28px;border:1px solid rgba(255,255,255,.03);display:flex;gap:14px;align-items:flex-start;transition:all .35s;cursor:default}
+.amen-card:hover{background:rgba(10,79,110,.08);border-color:rgba(10,116,144,.2);transform:translateY(-2px)}
+.amen-ic{font-size:22px;flex-shrink:0;line-height:1;margin-top:2px}
+.amen-nm{font-family:var(--serif);font-size:18px;color:var(--white);margin-bottom:3px}
+.amen-ds{font-size:12px;color:var(--muted);line-height:1.6}
+/* Full amenities image */
+.amen-full{margin-top:3px}
+.amen-full img{width:100%;max-height:600px;object-fit:cover;border:1px solid rgba(255,255,255,.03)}
+
+/* ── SPECS ── */
+#specs{background:var(--ink2)}
+.specs-wrap{margin-top:44px}
+.specs-img{width:100%;border:1px solid rgba(255,255,255,.04)}
+
+/* ── LOCATION ── */
+#location{background:var(--ink)}
+.loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:3px;margin-top:44px}
+.loc-map{position:relative;overflow:hidden}
+.loc-map img{width:100%;aspect-ratio:1;object-fit:cover;object-position:center;filter:brightness(.85)}
+.loc-info{background:var(--ink2);padding:48px;display:flex;flex-direction:column;gap:28px;justify-content:center}
+.loc-info .sh{font-size:clamp(32px,4vw,54px)}
+.loc-detail{display:flex;gap:14px;align-items:flex-start}
+.loc-ic{width:40px;height:40px;border:1px solid rgba(201,169,110,.2);display:flex;align-items:center;justify-content:center;color:var(--gold);flex-shrink:0}
+.loc-lbl{font-size:8.5px;letter-spacing:3px;text-transform:uppercase;color:var(--pink-l);margin-bottom:4px}
+.loc-val{font-family:var(--serif);font-size:17px;color:var(--white);line-height:1.4}
+.loc-val.sm{font-size:14px;line-height:1.5}
+.rera-row{padding:20px;border:1px solid rgba(201,169,110,.15);background:rgba(201,169,110,.03);display:flex;align-items:center;gap:16px}
+.rera-lbl{font-size:8.5px;letter-spacing:3px;text-transform:uppercase;color:var(--pink-l)}
+.rera-val{font-family:var(--serif);font-size:20px;color:var(--white)}
+.banks-row{padding-top:20px;border-top:1px solid rgba(255,255,255,.05)}
+.banks-lbl{font-size:8.5px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.banks-list{display:flex;flex-wrap:wrap;gap:8px}
+.bank-tag{padding:6px 14px;border:1px solid rgba(255,255,255,.07);font-size:11.5px;font-weight:400;color:var(--muted);transition:all .3s}
+.bank-tag:hover{border-color:var(--pink-l);color:var(--white)}
+
+/* ── PAYMENT ── */
+#pay{background:linear-gradient(180deg,var(--ink) 0%,var(--ink2) 100%)}
+.pay-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;margin-top:56px;align-items:start}
+.pay-tl{position:relative;padding-left:26px}
+.pay-tl::before{content:'';position:absolute;left:6px;top:8px;bottom:8px;width:1px;background:linear-gradient(to bottom,var(--gold),rgba(201,169,110,.05))}
+.pay-row{display:grid;grid-template-columns:14px 1fr auto;gap:16px;align-items:center;padding:11px 0;transition:all .3s}
+.pay-row:hover .pay-lbl{color:var(--white)}
+.pay-dot{width:12px;height:12px;border-radius:50%;border:1px solid var(--gold);background:var(--ink);flex-shrink:0;transition:background .3s}
+.pay-row:hover .pay-dot,.pay-row:first-child .pay-dot{background:var(--gold)}
+.pay-lbl{font-size:13px;color:var(--muted);transition:color .3s}
+.pay-pct{font-family:var(--serif);font-size:26px;color:rgba(201,169,110,.75)}
+/* price card */
+.price-card{background:var(--ink2);border:1px solid rgba(201,169,110,.1);padding:44px;position:sticky;top:96px}
+.price-card-t{font-family:var(--serif);font-size:30px;color:var(--white);margin-bottom:6px}
+.price-card-sub{font-size:9px;letter-spacing:3px;text-transform:uppercase;color:var(--pink-l);margin-bottom:32px}
+.pr{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid rgba(255,255,255,.04)}
+.pr-l{font-size:13px;color:var(--muted)}
+.pr-v{font-family:var(--serif);font-size:26px;color:var(--white)}
+.rs{color:var(--pink-l);font-size:14px}
+.pr-vs{font-family:var(--serif);font-size:17px;color:var(--white)}
+.rs-s{color:var(--pink-l);font-size:11px}
+.add-h{font-size:8.5px;letter-spacing:3px;text-transform:uppercase;color:var(--pink-l);margin:18px 0 10px}
+.pr-note{margin-top:18px;padding:14px 16px;border:1px solid rgba(201,79,123,.08);background:rgba(201,79,123,.02);font-size:11px;color:var(--muted);line-height:1.7}
+.pr-cta{display:block;width:100%;text-align:center;margin-top:24px;padding:15px;background:linear-gradient(135deg,var(--pink),var(--pink-d));color:var(--white);font-size:9.5px;font-weight:600;letter-spacing:3px;text-transform:uppercase;transition:opacity .3s;box-shadow:0 4px 20px rgba(201,79,123,.3)}
+.pr-cta:hover{opacity:.8}
+
+/* ── CONTACT ── */
+#contact{background:var(--ink2)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:start}
+.contact-info{display:flex;flex-direction:column;gap:22px;margin-top:8px}
+.ci{display:flex;gap:14px}
+.ci-ic{width:42px;height:42px;border:1px solid rgba(201,169,110,.2);display:flex;align-items:center;justify-content:center;color:var(--gold);flex-shrink:0}
+.ci-lbl{font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--pink-l);margin-bottom:4px}
+.ci-v{font-family:var(--serif);font-size:17px;color:var(--white);line-height:1.4}
+.ci-v.sm{font-size:14px}
+/* form */
+.fg{margin-bottom:18px}
+.fl{display:block;font-size:8.5px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-bottom:7px;font-weight:400}
+.fi,.fsel,.fta{width:100%;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.07);padding:13px 16px;color:var(--white);font-size:14px;font-weight:300;outline:none;transition:border-color .3s;appearance:none}
+.fi:focus,.fsel:focus,.fta:focus{border-color:rgba(10,116,144,.6)}
+.fi::placeholder,.fta::placeholder{color:var(--muted2)}
+.fsel option{background:var(--ink)}
+.fta{resize:none;height:100px}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fsub{width:100%;padding:15px;background:linear-gradient(135deg,var(--pink),var(--pink-d));color:var(--white);font-size:9.5px;font-weight:600;letter-spacing:3.5px;text-transform:uppercase;transition:opacity .3s;border:none;margin-top:6px;cursor:none;box-shadow:0 4px 20px rgba(201,79,123,.3)}
+.fsub:hover{opacity:.8}
+.fok{display:none;text-align:center;padding:56px 20px}
+.fok-ic{font-size:44px;margin-bottom:16px}
+.fok-t{font-family:var(--serif);font-size:36px;color:var(--gold);margin-bottom:8px}
+.fok-d{font-size:13px;color:var(--muted)}
+
+/* ── PARTNERS ── */
+#partners{background:var(--ink);padding:56px 64px;border-top:1px solid rgba(255,255,255,.04)}
+.par-in{max-width:1280px;margin:0 auto}
+.par-lbl{font-size:8.5px;letter-spacing:5px;text-transform:uppercase;color:var(--muted2);text-align:center;margin-bottom:28px}
+.par-row{display:flex;justify-content:center;flex-wrap:wrap;gap:8px;margin-bottom:40px}
+.par-tag{padding:8px 20px;border:1px solid rgba(255,255,255,.06);font-size:12px;color:var(--muted2);transition:all .3s}
+.par-tag:hover{border-color:var(--pink-l);color:var(--white)}
+
+/* ── FOOTER ── */
+footer{background:var(--ink);padding:72px 64px 36px;border-top:1px solid rgba(255,255,255,.05)}
+.ft{max-width:1280px;margin:0 auto}
+.ft-top{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:56px;padding-bottom:52px;border-bottom:1px solid rgba(255,255,255,.05)}
+.ft-brand-a{font-family:var(--script);font-size:52px;font-weight:400;color:var(--pink-l);text-shadow:0 0 30px rgba(201,79,123,.25)}
+.ft-brand-b{font-size:8px;letter-spacing:5px;text-transform:uppercase;color:var(--pink-l);margin-top:3px;margin-bottom:18px}
+.ft-slogan{font-family:var(--serif);font-size:18px;font-style:italic;color:rgba(247,245,240,.3);max-width:220px;line-height:1.5}
+.ft-col-t{font-size:9px;letter-spacing:3.5px;text-transform:uppercase;color:var(--pink-l);margin-bottom:18px}
+.ft-links{list-style:none;display:flex;flex-direction:column;gap:10px}
+.ft-links a{font-size:13px;color:var(--muted);transition:color .3s}
+.ft-links a:hover{color:var(--white)}
+.ft-bot{display:flex;justify-content:space-between;align-items:center;padding-top:26px}
+.ft-copy{font-size:11px;color:var(--muted2)}
+.ft-rera{font-size:10px;color:var(--muted2)}
+
+/* ── REVEAL ── */
+.rv{opacity:0;transform:translateY(36px);transition:opacity .85s var(--spring),transform .85s var(--spring)}
+.rv.v{opacity:1;transform:none}
+.rv.d1{transition-delay:.1s}.rv.d2{transition-delay:.2s}.rv.d3{transition-delay:.3s}.rv.d4{transition-delay:.4s}
+
+/* ── TILT ── */
+.tilt{transform-style:preserve-3d;will-change:transform}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1100px){
+  .sec{padding:90px 40px}.sband{padding:56px 40px}
+  nav{padding:22px 40px}nav.s{padding:13px 40px}
+  .hero-cnt,.hero-stats{padding-left:40px;right:40px}
+  .feat-cnt{padding:0 40px 56px}
+  #partners{padding:48px 40px}
+  footer{padding:64px 40px 32px}
+}
+@media(max-width:900px){
+  nav{padding:18px 22px}nav.s{padding:12px 22px}
+  .nav-links,.hero-stats,.hero-rera{display:none}
+  .nav-burger{display:flex}
+  .hero-cnt{padding:0 22px 64px}
+  .sec{padding:72px 22px}.sband{padding:48px 22px}
+  .brow{grid-template-columns:1fr 1fr}
+  .units-layout{grid-template-columns:1fr}
+  .units-tabs{position:static;display:grid;grid-template-columns:1fr 1fr;gap:2px}
+  .feat-cnt{padding:0 22px 44px}
+  .fp-tabs{flex-wrap:wrap}
+  .amen-list{grid-template-columns:1fr 1fr}
+  .loc-grid{grid-template-columns:1fr}
+  .pay-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .ft-top{grid-template-columns:1fr 1fr;gap:36px}
+  .ft-bot{flex-direction:column;gap:8px;text-align:center}
+  .sband-g{grid-template-columns:1fr 1fr}
+  #partners{padding:44px 22px}
+  footer{padding:56px 22px 28px}
+  .hero-btns{flex-direction:column;align-items:flex-start}
+}
+@media(max-width:600px){
+  .brow{grid-template-columns:1fr}
+  .amen-list{grid-template-columns:1fr}
+  .fr{grid-template-columns:1fr}
+  .ft-top{grid-template-columns:1fr}
+  .units-tabs{grid-template-columns:1fr}
+  .uplan-meta{grid-template-columns:1fr 1fr}
+  .feat-specs{flex-direction:column}
+  .feat-specs .feat-spec{width:100%}
+}
+/* ── WHATSAPP ── */
+#wa-bubble{position:fixed;bottom:32px;right:32px;z-index:9000;display:flex;flex-direction:column;align-items:flex-end;gap:12px}
+#wa-btn{width:60px;height:60px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:none;box-shadow:0 4px 20px rgba(37,211,102,.45);transition:transform .3s var(--spring),box-shadow .3s;position:relative}
+#wa-btn:hover{transform:scale(1.1);box-shadow:0 6px 28px rgba(37,211,102,.6)}
+#wa-btn svg{width:30px;height:30px;fill:#fff}
+.wa-ping{position:absolute;top:0;right:0;width:14px;height:14px;background:#FF3B30;border-radius:50%;border:2px solid var(--ink);animation:waping 2s ease-in-out infinite}
+@keyframes waping{0%,100%{transform:scale(1)}50%{transform:scale(1.3)}}
+#wa-tooltip{background:var(--ink2);border:1px solid rgba(37,211,102,.25);padding:8px 16px;border-radius:2px;font-size:12px;color:rgba(247,245,240,.7);white-space:nowrap;pointer-events:none;opacity:0;transform:translateX(8px);transition:all .3s}
+#wa-btn:hover ~ #wa-tooltip,#wa-btn:hover+#wa-tooltip{opacity:1;transform:translateX(0)}
+
+/* chat panel */
+#wa-panel{position:fixed;bottom:108px;right:32px;z-index:8999;width:340px;background:#fff;border-radius:12px;overflow:hidden;box-shadow:0 12px 48px rgba(0,0,0,.35);transform:translateY(20px) scale(.95);opacity:0;pointer-events:none;transition:all .35s var(--spring)}
+#wa-panel.open{transform:translateY(0) scale(1);opacity:1;pointer-events:all}
+.wa-head{background:linear-gradient(135deg,#075E54,#128C7E);padding:18px 20px;display:flex;align-items:center;gap:14px}
+.wa-av{width:44px;height:44px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;font-weight:700;color:#fff;flex-shrink:0}
+.wa-head-info{flex:1}
+.wa-name{font-size:15px;font-weight:600;color:#fff;margin-bottom:2px}
+.wa-status{font-size:11.5px;color:rgba(255,255,255,.7);display:flex;align-items:center;gap:5px}
+.wa-online{width:7px;height:7px;background:#4AE54A;border-radius:50%;animation:waping 2s ease-in-out infinite}
+.wa-close{color:rgba(255,255,255,.7);font-size:20px;cursor:none;transition:color .2s;background:none;border:none;line-height:1}
+.wa-close:hover{color:#fff}
+.wa-body{background:#ECE5DD;padding:20px 16px;min-height:130px;display:flex;align-items:flex-start}
+.wa-bubble-msg{background:#fff;border-radius:0 10px 10px 10px;padding:12px 16px;max-width:260px;box-shadow:0 1px 3px rgba(0,0,0,.12);position:relative}
+.wa-bubble-msg::before{content:'';position:absolute;top:0;left:-8px;border:8px solid transparent;border-right-color:#fff;border-top-color:#fff;border-left:0}
+.wa-msg-from{font-size:11px;font-weight:600;color:#075E54;margin-bottom:5px}
+.wa-msg-txt{font-size:13.5px;color:#303030;line-height:1.55}
+.wa-msg-time{font-size:10.5px;color:#999;text-align:right;margin-top:6px}
+.wa-foot{background:#fff;padding:14px 16px;border-top:1px solid #eee}
+.wa-quick{display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
+.wa-q-btn{width:100%;padding:10px 16px;background:#fff;border:1.5px solid #25D366;border-radius:24px;color:#075E54;font-size:12.5px;font-weight:500;cursor:none;transition:all .2s;text-align:left}
+.wa-q-btn:hover{background:#25D366;color:#fff}
+.wa-send-btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;padding:12px;background:#25D366;border-radius:8px;color:#fff;font-size:13px;font-weight:600;cursor:none;transition:background .2s;border:none}
+.wa-send-btn:hover{background:#1EA952}
+.wa-send-btn svg{width:18px;height:18px;fill:#fff}
+@media(max-width:480px){
+  #wa-panel{width:calc(100vw - 24px);right:12px;bottom:96px}
+  #wa-bubble{right:16px;bottom:20px}
+}
+</style>
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="ld">
+  <video id="ld-vid" autoplay muted playsinline preload="auto"
+    onended="loaderDone()"
+    onerror="loaderFallback()"
+    style="width:100%;height:100%;object-fit:cover;position:absolute;inset:0">
+    <source src="final intro video.mp4" type="video/mp4"/>
+  </video>
+  <div class="ld-fallback" id="ld-fb" style="display:none;position:absolute;inset:0;align-items:center;justify-content:center;flex-direction:column;background:var(--ink)">
+    <div style="font-family:var(--script);font-size:100px;color:var(--pink-l);text-shadow:0 0 60px rgba(201,79,123,.5)">Arya</div>
+    <div style="font-size:9px;letter-spacing:6px;text-transform:uppercase;color:rgba(240,160,192,.5);margin-top:12px">A Gateway to Vizag</div>
+  </div>
+</div>
+
+<!-- CURSOR -->
+<div id="cx"></div>
+<div id="cy"></div>
+
+<!-- MOB MENU -->
+<div class="mob" id="mob">
+  <span class="mob-x" id="mobX">✕</span>
+  <a href="#feat" onclick="mclose()">Project</a>
+  <a href="#units" onclick="mclose()">Unit Plans</a>
+  <a href="#amen" onclick="mclose()">Amenities</a>
+  <a href="#location" onclick="mclose()">Location</a>
+  <a href="#pay" onclick="mclose()">Pricing</a>
+  <a href="#contact" onclick="mclose()">Enquire</a>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="logo">
+    <span class="logo-a">ARYA</span>
+    <span class="logo-b">Sikharam · Visakhapatnam</span>
+  </div>
+  <ul class="nav-links">
+    <li><a href="#feat">Project</a></li>
+    <li><a href="#units">Unit Plans</a></li>
+    <li><a href="#amen">Amenities</a></li>
+    <li><a href="#location">Location</a></li>
+    <li><a href="#pay">Pricing</a></li>
+  </ul>
+  <a href="#contact" class="nav-enq">Enquire Now</a>
+  <div class="nav-burger" id="burger"><span></span><span></span><span></span></div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg-wrap">
+    <img class="hero-bg" id="hbg" src="assets/sikh_06.jpg" alt="Arya Sikharam — Night view, Paradesipalem, Visakhapatnam" onload="this.classList.add('k')"/>
+  </div>
+  <div class="hero-grade"></div>
+  <div class="hero-rera rv" id="hrera">RERA · P03280022275</div>
+  <div class="hero-cnt">
+    <div class="hero-tag" id="htag">
+      <div class="hero-tag-line"></div>
+      <span class="hero-tag-t">Paradesipalem, Visakhapatnam · Luxury Residences</span>
+    </div>
+    <h1 class="hero-h1" id="hh1">
+      <span style="font-family:var(--script);font-size:1.3em;font-weight:400;color:var(--pink-l);text-shadow:0 0 60px rgba(201,79,123,.4);display:block;line-height:.85">A Gateway</span>
+      <span style="font-family:var(--serif);font-size:.55em;font-weight:300;letter-spacing:6px;text-transform:uppercase;color:rgba(250,247,245,.65);display:block;margin-top:16px">to New Vizag</span>
+    </h1>
+    <p class="hero-sub" id="hsub">2 &amp; 3 BHK premium apartments in the heart of Visakhapatnam. Where modern architecture meets the spirit of the City of Destiny.</p>
+    <div class="hero-btns" id="hbtns">
+      <a href="#feat" class="btn-gold"><span>Explore Project</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
+      <a href="#contact" class="btn-out">Schedule Site Visit</a>
+    </div>
+  </div>
+  <div class="hero-stats" id="hstats">
+    <div><div class="hstat-n"><span id="hc1">0</span><sup>+</sup></div><div class="hstat-l">Years Excellence</div></div>
+    <div><div class="hstat-n"><span id="hc2">0</span><sup>+</sup></div><div class="hstat-l">Amenities</div></div>
+  </div>
+  <div class="hero-scroll" id="hscrl"><span>Scroll</span><div class="scrl"></div></div>
+</section>
+
+<!-- MARQUEE -->
+<div class="mqbar">
+  <div class="mq-tr">
+    <div class="mq-it">A Gateway to Vizag<span class="mq-dt"></span></div>
+    <div class="mq-it">2 &amp; 3 BHK Luxury<span class="mq-dt"></span></div>
+    <div class="mq-it">50% Open Space<span class="mq-dt"></span></div>
+    <div class="mq-it">25+ Amenities<span class="mq-dt"></span></div>
+    <div class="mq-it">RERA Approved<span class="mq-dt"></span></div>
+    <div class="mq-it">Paradesipalem<span class="mq-dt"></span></div>
+    <div class="mq-it">Visakhapatnam<span class="mq-dt"></span></div>
+    <div class="mq-it">Premium Quality<span class="mq-dt"></span></div>
+    <div class="mq-it">A Gateway to Vizag<span class="mq-dt"></span></div>
+    <div class="mq-it">2 &amp; 3 BHK Luxury<span class="mq-dt"></span></div>
+    <div class="mq-it">50% Open Space<span class="mq-dt"></span></div>
+    <div class="mq-it">25+ Amenities<span class="mq-dt"></span></div>
+    <div class="mq-it">RERA Approved<span class="mq-dt"></span></div>
+    <div class="mq-it">Paradesipalem<span class="mq-dt"></span></div>
+    <div class="mq-it">Visakhapatnam<span class="mq-dt"></span></div>
+    <div class="mq-it">Premium Quality<span class="mq-dt"></span></div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="sband">
+  <div class="sband-g">
+    <div class="sb rv"><div class="sb-n"><span class="cnt" data-t="7">0</span>+</div><div class="sb-l">Years of Excellence</div></div>
+    <div class="sb rv d1"><div class="sb-n"><span class="cnt" data-t="25">0</span>+</div><div class="sb-l">World-Class Amenities</div></div>
+    <div class="sb rv d2"><div class="sb-n">50%</div><div class="sb-l">Open Space</div></div>
+    <div class="sb rv d3"><div class="sb-n">G+8</div><div class="sb-l">Floors of Living</div></div>
+  </div>
+</div>
+
+<!-- FEATURED PROJECT -->
+<section id="feat">
+  <div class="feat-hero rv">
+    <img src="assets/sikh_04.jpg" alt="Arya Sikharam — full building daytime aerial view"/>
+    <div class="feat-grade"></div>
+    <div class="feat-cnt">
+      <div class="feat-badge"><div class="feat-badge-dot"></div><span class="feat-badge-t">Now Selling · Paradesipalem Village, Visakhapatnam 531163</span></div>
+      <div class="feat-title rv">Arya<em>Sikharam</em></div>
+      <div class="feat-loc rv">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        Beside Sub-Station, Paradesipalem Village, Visakhapatnam AP – 531163
+      </div>
+      <p class="feat-tagline rv">Make the first move to New Vizag — it is a comfortable feeling to know that you stand on your own ground.</p>
+      <div class="feat-specs rv">
+        <div class="feat-spec"><div class="feat-spec-v">2 &amp; 3</div><div class="feat-spec-l">BHK Options</div></div>
+        <div class="feat-spec"><div class="feat-spec-v">G + 8</div><div class="feat-spec-l">Floors</div></div>
+        <div class="feat-spec"><div class="feat-spec-v">50%</div><div class="feat-spec-l">Open Space</div></div>
+        <div class="feat-spec"><div class="feat-spec-v">25+</div><div class="feat-spec-l">Amenities</div></div>
+      </div>
+      <div class="feat-btns rv">
+        <a href="#contact" class="btn-gold"><span>Register Interest</span></a>
+        <a href="#units" class="btn-out">View Floor Plans</a>
+      </div>
+    </div>
+  </div>
+  <!-- Building image gallery -->
+  <div class="brow">
+    <div class="brow-item rv">
+      <img src="assets/sikh_03.jpg" alt="Arya Sikharam — gate entrance daytime render"/>
+      <div class="brow-caption">Entrance View</div>
+    </div>
+    <div class="brow-item rv d1">
+      <img src="assets/sikh_05.jpg" alt="Arya Sikharam — courtyard night render"/>
+      <div class="brow-caption">Courtyard · Night</div>
+    </div>
+    <div class="brow-item rv d2">
+      <img src="assets/sikh_06.jpg" alt="Arya Sikharam — front elevation night"/>
+      <div class="brow-caption">Front Elevation · Night</div>
+    </div>
+  </div>
+</section>
+
+<!-- UNIT PLANS -->
+<section id="units" class="sec">
+  <div class="w">
+    <div class="ey rv"><span class="ey-t">Apartment Configurations</span></div>
+    <h2 class="sh rv">Choose Your<br><em>Perfect Home</em></h2>
+    <p class="sd rv">Every unit is crafted for comfort and light — wide balconies, generous rooms, and thoughtful layouts for Vizag's finest living.</p>
+    <div class="units-layout">
+      <div class="units-tabs" id="utabs">
+        <button class="utab act" onclick="switchUnit(0)"><div class="utab-type">2 BHK</div><div class="utab-name">830 Sqft</div><div class="utab-sqft">East Facing</div></button>
+        <button class="utab" onclick="switchUnit(1)"><div class="utab-type">2 BHK</div><div class="utab-name">870 Sqft</div><div class="utab-sqft">West Facing</div></button>
+        <button class="utab" onclick="switchUnit(2)"><div class="utab-type">2 BHK</div><div class="utab-name">1035 Sqft</div><div class="utab-sqft">East Facing</div></button>
+        <button class="utab" onclick="switchUnit(3)"><div class="utab-type">2 BHK</div><div class="utab-name">1070 Sqft</div><div class="utab-sqft">West Facing</div></button>
+        <button class="utab" onclick="switchUnit(4)"><div class="utab-type">2 BHK</div><div class="utab-name">1135 Sqft</div><div class="utab-sqft">East / West</div></button>
+        <button class="utab" onclick="switchUnit(5)"><div class="utab-type">3 BHK</div><div class="utab-name">1340 Sqft</div><div class="utab-sqft">East / West</div></button>
+        <button class="utab" onclick="switchUnit(6)"><div class="utab-type">3 BHK</div><div class="utab-name">1480 Sqft</div><div class="utab-sqft">West Facing</div></button>
+        <button class="utab" onclick="switchUnit(7)"><div class="utab-type">3 BHK</div><div class="utab-name">1610 Sqft</div><div class="utab-sqft">East Facing</div></button>
+        <button class="utab" onclick="switchUnit(8)"><div class="utab-type">3 BHK</div><div class="utab-name">1675 Sqft</div><div class="utab-sqft">West Facing</div></button>
+      </div>
+      <div class="unit-display">
+        <!-- 0: 830 East -->
+        <div class="uplan act" id="up0">
+          <img src="assets/sikh_14.jpg" alt="830 sqft East Facing floor plan"/>
+          <div class="uplan-meta">
+            <div class="upm"><div class="upm-v">830 Sqft</div><div class="upm-l">Carpet Area</div></div>
+            <div class="upm"><div class="upm-v">East</div><div class="upm-l">Facing</div></div>
+            <div class="upm"><div class="upm-v">2 BHK</div><div class="upm-l">Type</div></div>
+            <div class="upm"><div class="upm-v">4' Wide</div><div class="upm-l">Balcony</div></div>
+          </div>
+        </div>
+        <!-- 1: 870 West -->
+        <div class="uplan" id="up1">
+          <img src="assets/sikh_14.jpg" alt="870 sqft West Facing floor plan"/>
+          <div class="uplan-meta">
+            <div class="upm"><div class="upm-v">870 Sqft</div><div class="upm-l">Carpet Area</div></div>
+            <div class="upm"><div class="upm-v">West</div><div class="upm-l">Facing</div></div>
+            <div class="upm"><div class="upm-v">2 BHK</div><div class="upm-l">Type</div></div>
+            <div class="upm"><div class="upm-v">4' Wide</div><div class="upm-l">Balcony</div></div>
+          </div>
+        </div>
+        <!-- 2: 1035 East -->
+        <div class="uplan" id="up2">
+          <img src="assets/sikh_11.jpg" alt="1035 sqft East Facing floor plan"/>
+          <div class="uplan-meta">
+            <div class="upm"><div class="upm-v">1035 Sqft</div><div class="upm-l">Carpet Area</div></div>
+            <div class="upm"><div class="upm-v">East</div><div class="upm-l">Facing</div></div>
+            <div class="upm"><div class="upm-v">2 BHK</div><div class="upm-l">Type</div></div>
+            <div class="upm"><div class="upm-v">6'6" Wide</div><div class="upm-l">Balcony</div></div>
+          </div>
+        </div>
+        <!-- 3: 1070 West -->
+        <div class="uplan" id="up3">
+          <img src="assets/sikh_11.jpg" alt="1070 sqft West Facing floor plan"/>
+          <div class="uplan-meta">
+            <div class="upm"><div class="upm-v">1070 Sqft</div><div class="upm-l">Carpet Area</div></div>
+            <div class="upm"><div class="upm-v">West</div><div class="upm-l">Facing</div></div>
+            <div class="upm"><div class="upm-v">2 BHK</div><div class="upm-l">Type</div></div>
+            <div class="upm"><div class="upm-v">7'6"×8'3"</div><div class="upm-l">Sit-out</div></div>
+          </div>
+        </div>
+        <!-- 4: 1135 -->
+        <div class="uplan" id="up4">
+          <img src="assets/sikh_13.jpg" alt="1135 sqft floor plan"/>
+          <div class="uplan-meta">
+            <div class="upm"><div class="upm-v">1135 Sqft</div><div class="upm-l">Carpet Area</div></div>
+            <div class="upm"><div class="upm-v">E / W</div><div class="upm-l">Facing Options</div></div>
+            <div class="upm"><div class="upm-v">2 BHK</div><div class="upm-l">Type</div></div>
+            <div class="upm"><div class="upm-v">4' Wide</div><div class="upm-l">Balcony</div></div>
+          </div>
+        </div>
+        <!-- 5: 1340 -->
+        <div class="uplan" id="up5">
+          <img src="assets/sikh_10.jpg" alt="1340 sqft floor plan"/>
+          <div class="uplan-meta">
+            <div class="upm"><div class="upm-v">1340 Sqft</div><div class="upm-l">Carpet Area</div></div>
+            <div class="upm"><div class="upm-v">E / W</div><div class="upm-l">Facing Options</div></div>
+            <div class="upm"><div class="upm-v">3 BHK</div><div class="upm-l">Type</div></div>
+            <div class="upm"><div class="upm-v">4'–5'</div><div class="upm-l">Wide Balcony</div></div>
+          </div>
+        </div>
+        <!-- 6: 1480 -->
+        <div class="uplan" id="up6">
+          <img src="assets/sikh_12.jpg" alt="1480 sqft West Facing floor plan"/>
+          <div class="uplan-meta">
+            <div class="upm"><div class="upm-v">1480 Sqft</div><div class="upm-l">Carpet Area</div></div>
+            <div class="upm"><div class="upm-v">West</div><div class="upm-l">Facing</div></div>
+            <div class="upm"><div class="upm-v">3 BHK</div><div class="upm-l">Type</div></div>
+            <div class="upm"><div class="upm-v">4'6"</div><div class="upm-l">Wide Balcony</div></div>
+          </div>
+        </div>
+        <!-- 7: 1610 -->
+        <div class="uplan" id="up7">
+          <img src="assets/sikh_12.jpg" alt="1610 sqft East Facing floor plan"/>
+          <div class="uplan-meta">
+            <div class="upm"><div class="upm-v">1610 Sqft</div><div class="upm-l">Carpet Area</div></div>
+            <div class="upm"><div class="upm-v">East</div><div class="upm-l">Facing</div></div>
+            <div class="upm"><div class="upm-v">3 BHK</div><div class="upm-l">Type</div></div>
+            <div class="upm"><div class="upm-v">5'3"</div><div class="upm-l">Wide Balcony</div></div>
+          </div>
+        </div>
+        <!-- 8: 1675 -->
+        <div class="uplan" id="up8">
+          <img src="assets/sikh_09.jpg" alt="1675 sqft West Facing floor plan"/>
+          <div class="uplan-meta">
+            <div class="upm"><div class="upm-v">1675 Sqft</div><div class="upm-l">Carpet Area</div></div>
+            <div class="upm"><div class="upm-v">West</div><div class="upm-l">Facing</div></div>
+            <div class="upm"><div class="upm-v">3 BHK</div><div class="upm-l">Type</div></div>
+            <div class="upm"><div class="upm-v">6' Wide</div><div class="upm-l">Dual Balcony</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FLOOR PLANS -->
+<section id="floorplans" class="sec">
+  <div class="w">
+    <div class="ey rv"><span class="ey-t">Site Plans</span></div>
+    <h2 class="sh rv">Building<br><em>Floor Plans</em></h2>
+    <div class="fp-tabs">
+      <button class="fptab act" onclick="switchFP(0)">Stilt + Ground Floor</button>
+      <button class="fptab" onclick="switchFP(1)">Typical Floor (2nd–8th)</button>
+    </div>
+    <div class="fpplan act" id="fp0"><img src="assets/plan_01.jpg" alt="Stilt floor and ground floor plan — Arya Sikharam"/></div>
+    <div class="fpplan" id="fp1"><img src="assets/plan_02.jpg" alt="Typical floor plan 2nd to 8th — Arya Sikharam"/></div>
+  </div>
+</section>
+
+<!-- AMENITIES -->
+<section id="amen" class="sec">
+  <div class="w">
+    <div class="ey rv"><span class="ey-t">World-Class Amenities</span></div>
+    <h2 class="sh rv">25+ Amenities.<br><em>Every Detail Considered.</em></h2>
+    <!-- actual amenity renders from brochure -->
+    <div class="amen-spread rv" style="margin-top:44px;position:relative;overflow:hidden">
+      <img src="assets/sikh_15.jpg" alt="Arya Sikharam amenities — gym, dining, yoga, kids area" style="width:100%;aspect-ratio:2/1;object-fit:cover;object-position:center;filter:brightness(.85)"/>
+      <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(11,14,26,.8) 0%,rgba(11,14,26,.1) 60%)"></div>
+      <div style="position:absolute;top:50%;left:56px;transform:translateY(-50%)">
+        <div style="font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);margin-bottom:12px">Indoor Amenities</div>
+        <div style="font-family:var(--serif);font-size:clamp(32px,4vw,56px);font-weight:300;color:var(--white);line-height:1.1">The Thrill of<br><em style="color:var(--gold);font-style:italic">Indoor Living</em></div>
+      </div>
+    </div>
+    <div class="amen-list" style="margin-top:3px">
+      <div class="amen-card rv"><div class="amen-ic">🏋️</div><div><div class="amen-nm">Indoor Gym</div><div class="amen-ds">State-of-the-art fitness centre with premium equipment and open natural light.</div></div></div>
+      <div class="amen-card rv d1"><div class="amen-ic">🧘</div><div><div class="amen-nm">Yoga &amp; Meditation</div><div class="amen-ds">Serene space for mind and body — designed for daily wellness rituals.</div></div></div>
+      <div class="amen-card rv d2"><div class="amen-ic">🎱</div><div><div class="amen-nm">Pool Table</div><div class="amen-ds">Premium recreation space for leisure and socialising with neighbours.</div></div></div>
+      <div class="amen-card rv"><div class="amen-ic">🍽️</div><div><div class="amen-nm">Dining Lounge</div><div class="amen-ds">Grand multipurpose dining and banquet hall for private gatherings.</div></div></div>
+      <div class="amen-card rv d1"><div class="amen-ic">👶</div><div><div class="amen-nm">Day Care &amp; Crèche</div><div class="amen-ds">Safe, staffed childcare facility for the youngest residents.</div></div></div>
+      <div class="amen-card rv d2"><div class="amen-ic">🏥</div><div><div class="amen-nm">Clinic &amp; Pharmacy</div><div class="amen-ds">On-site healthcare facilities — wellness at your doorstep, always.</div></div></div>
+      <div class="amen-card rv"><div class="amen-ic">🛒</div><div><div class="amen-nm">Super Market</div><div class="amen-ds">Convenient in-complex shopping for everyday essentials.</div></div></div>
+      <div class="amen-card rv d1"><div class="amen-ic">💆</div><div><div class="amen-nm">SPA</div><div class="amen-ds">Luxury wellness spa for complete relaxation after a long day.</div></div></div>
+      <div class="amen-card rv d2"><div class="amen-ic">🛡️</div><div><div class="amen-nm">Guest Rooms</div><div class="amen-ds">Tastefully furnished guest suites for visiting family and friends.</div></div></div>
+    </div>
+    <!-- outdoor amenities image -->
+    <div class="amen-full rv" style="margin-top:3px">
+      <div style="position:relative;overflow:hidden">
+        <img src="assets/sikh_16.jpg" alt="Arya Sikharam — outdoor amenities, tennis court, children's play area" style="width:100%;max-height:620px;object-fit:cover;object-position:center top"/>
+        <div style="position:absolute;inset:0;background:linear-gradient(to right,rgba(11,14,26,.75) 0%,rgba(11,14,26,.05) 50%)"></div>
+        <div style="position:absolute;top:50%;left:56px;transform:translateY(-50%)">
+          <div style="font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--bay3);margin-bottom:12px">Outdoor Amenities</div>
+          <div style="font-family:var(--serif);font-size:clamp(28px,4vw,52px);font-weight:300;color:var(--white);line-height:1.15;max-width:340px">Cricket Nets · Tennis<br><em style="color:var(--gold);font-style:italic">Sky Walk · Cycling</em></div>
+          <div style="margin-top:16px;font-size:12.5px;color:rgba(247,245,240,.5);max-width:300px;line-height:1.7">Baby Pool · Basketball Ring · EV Charging Points · CCTV 24x7 · Grand Entrance Lobby · Terrace Landscape · Senior Citizen Area</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPECIFICATIONS -->
+<section id="specs" class="sec">
+  <div class="w">
+    <div class="ey rv"><span class="ey-t">Construction Quality</span></div>
+    <h2 class="sh rv">Built to Last,<br><em>Crafted to Impress</em></h2>
+    <p class="sd rv">Seismic-resistant RCC structure, UPVC Veka windows, Jaquar fittings, Legrand electrics — no compromise, anywhere.</p>
+    <div class="specs-wrap rv" style="margin-top:44px">
+      <img src="assets/sikh_17.jpg" alt="Arya Sikharam full specifications — structure, windows, flooring, electrical, fittings" class="specs-img"/>
+    </div>
+  </div>
+</section>
+
+<!-- LOCATION -->
+<section id="location" class="sec">
+  <div class="w">
+    <div class="ey rv"><span class="ey-t">Location &amp; Connectivity</span></div>
+    <h2 class="sh rv">Paradesipalem,<br><em>Visakhapatnam</em></h2>
+    <div class="loc-grid">
+      <div class="loc-map rv">
+        <img src="assets/sikh_18.jpg" alt="Arya Sikharam location map — Paradesipalem, Visakhapatnam"/>
+      </div>
+      <div class="loc-info rv">
+        <div>
+          <div class="sh" style="font-size:clamp(28px,3vw,44px)">Developed by<br><em>Arya Constructions</em><br><em>Project LLP</em></div>
+        </div>
+        <div class="loc-detail">
+          <div class="loc-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div>
+            <div class="loc-lbl">Site Address</div>
+            <div class="loc-val sm">Beside Sub-Station, Paradesipalem Village,<br>Visakhapatnam, Andhra Pradesh – 531163</div>
+          </div>
+        </div>
+        <div class="loc-detail">
+          <div class="loc-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <div>
+            <div class="loc-lbl">Corporate Address</div>
+            <div class="loc-val sm">55-1-40/3/GF-1A, Arya Ananta,<br>Jagannatha Raju Nagar, Visakhapatnam – 530022</div>
+          </div>
+        </div>
+        <div class="rera-row">
+          <div><div class="rera-lbl">AP RERA Registration</div><div class="rera-val">P03280022275</div></div>
+        </div>
+        <div class="banks-row">
+          <div class="banks-lbl">Approved Banks</div>
+          <div class="banks-list">
+            <div class="bank-tag">SBI</div>
+            <div class="bank-tag">HDFC Bank</div>
+            <div class="bank-tag">LIC HFL</div>
+            <div class="bank-tag">Bank of Baroda</div>
+            <div class="bank-tag">Kotak</div>
+            <div class="bank-tag">Indian Bank</div>
+            <div class="bank-tag">South Indian Bank</div>
+            <div class="bank-tag">Karnataka Bank</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PAYMENT -->
+<section id="pay" class="sec">
+  <div class="w">
+    <div class="ey rv"><span class="ey-t">Arya Boyapalem · Pricing</span></div>
+    <h2 class="sh rv">Transparent<br><em>Payment Schedule</em></h2>
+    <p class="sd rv">Pay as your home is built — linked to construction milestones. Zero hidden charges.</p>
+    <div class="pay-grid">
+      <div class="pay-tl">
+        <div class="pay-row rv"><div class="pay-dot"></div><div class="pay-lbl">Booking Advance (BA)</div><div class="pay-pct">5%</div></div>
+        <div class="pay-row rv"><div class="pay-dot"></div><div class="pay-lbl">Agreement of Sale (within 1 month)</div><div class="pay-pct">5%</div></div>
+        <div class="pay-row rv"><div class="pay-dot"></div><div class="pay-lbl">Foundation</div><div class="pay-pct">10%</div></div>
+        <div class="pay-row rv"><div class="pay-dot"></div><div class="pay-lbl">Cellar Slab Completion</div><div class="pay-pct">10%</div></div>
+        <div class="pay-row rv"><div class="pay-dot"></div><div class="pay-lbl">1st Slab Completion</div><div class="pay-pct">10%</div></div>
+        <div class="pay-row rv"><div class="pay-dot"></div><div class="pay-lbl">3rd Slab Completion</div><div class="pay-pct">10%</div></div>
+        <div class="pay-row rv"><div class="pay-dot"></div><div class="pay-lbl">5th Slab Completion</div><div class="pay-pct">10%</div></div>
+        <div class="pay-row rv"><div class="pay-dot"></div><div class="pay-lbl">7th Slab Completion</div><div class="pay-pct">10%</div></div>
+        <div class="pay-row rv"><div class="pay-dot"></div><div class="pay-lbl">9th Slab Completion</div><div class="pay-pct">10%</div></div>
+        <div class="pay-row rv"><div class="pay-dot"></div><div class="pay-lbl">Brick Work</div><div class="pay-pct">5%</div></div>
+        <div class="pay-row rv"><div class="pay-dot"></div><div class="pay-lbl">Flooring</div><div class="pay-pct">10%</div></div>
+        <div class="pay-row rv"><div class="pay-dot"></div><div class="pay-lbl">Handing Over</div><div class="pay-pct">5%</div></div>
+      </div>
+      <div>
+        <div class="price-card rv">
+          <div class="price-card-t">Arya Boyapalem</div>
+          <div class="price-card-sub">Base Price · May 2026</div>
+          <div class="pr"><span class="pr-l">East Facing (per sqft)</span><span class="pr-v"><span class="rs">₹</span>5,000</span></div>
+          <div class="pr"><span class="pr-l">West Facing (per sqft)</span><span class="pr-v"><span class="rs">₹</span>4,750</span></div>
+          <div class="pr"><span class="pr-l">Amenities + 1 Car Parking</span><span class="pr-v"><span class="rs">₹</span>5,00,000</span></div>
+          <div class="add-h">Floor &amp; Corner Premiums</div>
+          <div class="pr"><span class="pr-l">East facing (all floors)</span><span class="pr-vs"><span class="rs-s">₹</span>100/sqft</span></div>
+          <div class="pr"><span class="pr-l">Corner flats (2 sides open)</span><span class="pr-vs"><span class="rs-s">₹</span>100/sqft</span></div>
+          <div class="pr"><span class="pr-l">6th Floor</span><span class="pr-vs"><span class="rs-s">₹</span>100/sqft</span></div>
+          <div class="pr"><span class="pr-l">7th Floor</span><span class="pr-vs"><span class="rs-s">₹</span>200/sqft</span></div>
+          <div class="pr"><span class="pr-l">8th Floor</span><span class="pr-vs"><span class="rs-s">₹</span>300/sqft</span></div>
+          <div class="pr-note">Registration, stamp duty &amp; GST as per prevailing Govt. rates. Documentation charge ₹50,000 payable before registration. Maintenance &amp; Corpus Fund payable on/before registration. Prices subject to revision.</div>
+          <a href="#contact" class="pr-cta">Request Full Price Sheet →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section id="partners">
+  <div class="par-in">
+    <div class="par-lbl rv">Premium Brand Partners</div>
+    <div class="par-row rv">
+      <div class="par-tag">Jaquar Fittings</div><div class="par-tag">Legrand</div><div class="par-tag">Saint-Gobain Glass</div><div class="par-tag">Havells</div><div class="par-tag">Berger Paints</div><div class="par-tag">Kajaria Tiles</div>
+    </div>
+    <div class="par-lbl rv">Veka UPVC Windows &amp; Doors · Supreme Sanitary Pipes · Astral / Ashirwad CPVC · Simhadri / Vizag Steel · Legrand Switchgear</div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="sec">
+  <div class="w">
+    <div class="contact-grid">
+      <div>
+        <div class="ey rv"><span class="ey-t">Get in Touch</span></div>
+        <h2 class="sh rv">Begin Your<br><em>Journey</em></h2>
+        <p class="sd rv" style="margin-bottom:40px">Our team is ready to walk you through every detail — site visits, payment plans, registration. Call or fill the form.</p>
+        <div class="contact-info">
+          <div class="ci rv"><div class="ci-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.6a16 16 0 0 0 6.06 6.06l1.56-1.56a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><div class="ci-lbl">Phone</div><div class="ci-v">+91 9161718999</div></div></div>
+          <div class="ci rv"><div class="ci-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><div class="ci-lbl">Email</div><div class="ci-v">info@aryaprojects.com</div></div></div>
+          <div class="ci rv"><div class="ci-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><div class="ci-lbl">Site Address</div><div class="ci-v sm">Beside Sub-Station, Paradesipalem Village,<br>Visakhapatnam, AP – 531163</div></div></div>
+          <div class="ci rv"><div class="ci-ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><div class="ci-lbl">Corporate Office</div><div class="ci-v sm">55-1-40/3/GF-1A, Arya Ananta, Jagannatha Raju Nagar,<br>Visakhapatnam – 530022</div></div></div>
+        </div>
+      </div>
+      <div class="rv">
+        <form id="eform">
+          <div class="fr">
+            <div class="fg"><label class="fl">First Name</label><input type="text" class="fi" placeholder="Rajesh" required></div>
+            <div class="fg"><label class="fl">Last Name</label><input type="text" class="fi" placeholder="Kumar" required></div>
+          </div>
+          <div class="fg"><label class="fl">Phone</label><input type="tel" class="fi" placeholder="+91 98765 43210" required></div>
+          <div class="fg"><label class="fl">Email</label><input type="email" class="fi" placeholder="email@example.com"></div>
+          <div class="fg">
+            <label class="fl">Unit Interest</label>
+            <select class="fsel">
+              <option>Arya Sikharam — 2 BHK (830–1135 Sqft)</option>
+              <option>Arya Sikharam — 3 BHK (1340–1675 Sqft)</option>
+              <option>Arya Boyapalem</option>
+              <option>General Enquiry</option>
+            </select>
+          </div>
+          <div class="fg"><label class="fl">Message (Optional)</label><textarea class="fta" placeholder="Tell us your requirements, preferred floor, facing..."></textarea></div>
+          <button type="submit" class="fsub">Submit Enquiry →</button>
+        </form>
+        <div class="fok" id="fok">
+          <div class="fok-ic">✦</div>
+          <div class="fok-t">Thank You</div>
+          <div class="fok-d">Our team will reach out to you shortly.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft">
+    <div class="ft-top">
+      <div>
+        <div class="ft-brand-a">ARYA</div>
+        <div class="ft-brand-b">Sikharam · Visakhapatnam</div>
+        <div class="ft-slogan">"A Gateway to New Vizag"</div>
+        <div style="margin-top:20px;font-size:10px;color:var(--muted2);line-height:1.7">Arya Constructions Project LLP<br>RERA: P03280022275</div>
+      </div>
+      <div>
+        <div class="ft-col-t">Project</div>
+        <ul class="ft-links">
+          <li><a href="#feat">Building Views</a></li>
+          <li><a href="#units">Unit Plans</a></li>
+          <li><a href="#floorplans">Floor Plans</a></li>
+          <li><a href="#amen">Amenities</a></li>
+          <li><a href="#specs">Specifications</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="ft-col-t">Information</div>
+        <ul class="ft-links">
+          <li><a href="#location">Location</a></li>
+          <li><a href="#pay">Pricing</a></li>
+          <li><a href="#contact">Schedule Visit</a></li>
+          <li><a href="#contact">Enquire</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="ft-col-t">Contact</div>
+        <ul class="ft-links">
+          <li><a href="tel:+919161718999">+91 9161718999</a></li>
+          <li><a href="mailto:info@aryaprojects.com">info@aryaprojects.com</a></li>
+          <li><a href="#contact">Paradesipalem, Vizag</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="ft-bot">
+      <div class="ft-copy">© 2026 Arya Constructions Project LLP. All rights reserved.</div>
+      <div class="ft-rera">AP RERA P03280022275 · Andhra Pradesh</div>
+    </div>
+  </div>
+</footer>
+
+<!-- WHATSAPP WIDGET -->
+<div id="wa-bubble">
+  <button id="wa-btn" onclick="toggleWA()" aria-label="Chat on WhatsApp">
+    <div class="wa-ping"></div>
+    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+  </button>
+</div>
+
+<div id="wa-panel">
+  <div class="wa-head">
+    <div class="wa-av">V</div>
+    <div class="wa-head-info">
+      <div class="wa-name">Venkatesh</div>
+      <div class="wa-status"><span class="wa-online"></span>Arya Projects · Typically replies instantly</div>
+    </div>
+    <button class="wa-close" onclick="toggleWA()">✕</button>
+  </div>
+  <div class="wa-body">
+    <div class="wa-bubble-msg">
+      <div class="wa-msg-from">Venkatesh — Arya Projects</div>
+      <div class="wa-msg-txt">👋 Hello! I'm Venkatesh from Arya Projects.<br><br>Looking for your dream home in Visakhapatnam? I can help you with unit availability, pricing, site visits, and anything else about <strong>Arya Sikharam</strong> or <strong>Arya Boyapalem</strong>.</div>
+      <div class="wa-msg-time">Available now</div>
+    </div>
+  </div>
+  <div class="wa-foot">
+    <div class="wa-quick">
+      <button class="wa-q-btn" onclick="waMsg('I\'m interested in Arya Sikharam. Can you share the pricing and availability?')">💰 Pricing &amp; Availability</button>
+      <button class="wa-q-btn" onclick="waMsg('I\'d like to schedule a site visit to Arya Sikharam.')">📍 Schedule a Site Visit</button>
+      <button class="wa-q-btn" onclick="waMsg('Can you send me the brochure and floor plans for Arya Sikharam?')">📄 Get Brochure &amp; Plans</button>
+    </div>
+    <button class="wa-send-btn" onclick="waMsg('Hi Venkatesh! I saw Arya Sikharam online and I\'m interested. Can you help me?')">
+      <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+      Start Chat with Venkatesh
+    </button>
+  </div>
+</div>
+
+<script>
+// ── CURSOR ──────────────────────────────────────────────────
+const cx=document.getElementById('cx'),cy=document.getElementById('cy');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cx.style.left=mx+'px';cx.style.top=my+'px'});
+(function lc(){rx+=(mx-rx)*.12;ry+=(my-ry)*.12;cy.style.left=rx+'px';cy.style.top=ry+'px';requestAnimationFrame(lc)})();
+document.querySelectorAll('a,button,.amen-card,.brow-item,.bank-tag,.par-tag,.utab,.fptab,.pc,.loc-detail').forEach(el=>{
+  el.addEventListener('mouseenter',()=>cy.classList.add('big'));
+  el.addEventListener('mouseleave',()=>cy.classList.remove('big'));
+});
+
+// ── LOADER (video) ───────────────────────────────────────────
+function loaderDone(){
+  document.getElementById('ld').classList.add('out');
+  setTimeout(heroIn,400);
+}
+function loaderFallback(){
+  // video failed — show text fallback, dismiss after 2.5s
+  document.getElementById('ld-fb').style.display='flex';
+  setTimeout(loaderDone,2500);
+}
+// safety net: if video takes >12s, dismiss anyway
+window.addEventListener('load',()=>{
+  const vid=document.getElementById('ld-vid');
+  if(vid){
+    vid.play().catch(()=>loaderFallback()); // autoplay blocked → fallback
+    setTimeout(()=>{if(!document.getElementById('ld').classList.contains('out'))loaderDone();},12000);
+  } else loaderFallback();
+});
+
+// ── NAV ─────────────────────────────────────────────────────
+window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('s',scrollY>80),{passive:true});
+document.getElementById('burger').onclick=()=>document.getElementById('mob').classList.add('open');
+document.getElementById('mobX').onclick=mclose;
+function mclose(){document.getElementById('mob').classList.remove('open')}
+
+// ── HERO ANIMATIONS ─────────────────────────────────────────
+function heroIn(){
+  const seq=[['#htag',0],['#hh1',100],['#hsub',220],['#hbtns',340],['#hstats',480],['#hscrl',540],['#hrera',600]];
+  seq.forEach(([sel,d])=>{
+    const el=document.querySelector(sel);
+    if(!el)return;
+    setTimeout(()=>{
+      el.style.transition='opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)';
+      el.style.opacity='1';el.style.transform='translateY(0) scale(1)';
+    },d);
+  });
+  cntUp('hc1',7,1600);cntUp('hc2',25,1800);
+}
+function cntUp(id,t,d){
+  const el=document.getElementById(id);if(!el)return;
+  const s=performance.now();
+  (function f(n){const p=Math.min((n-s)/d,1),v=Math.round((1-(1-p)**3)*t);el.textContent=v;if(p<1)requestAnimationFrame(f);})(s);
+}
+
+// ── SCROLL REVEAL ────────────────────────────────────────────
+const ro=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('v');ro.unobserve(e.target);}});},{threshold:.07,rootMargin:'0px 0px -40px 0px'});
+document.querySelectorAll('.rv').forEach(el=>ro.observe(el));
+
+// ── STAT COUNTERS ────────────────────────────────────────────
+const co=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){runC(e.target);co.unobserve(e.target);}});},{threshold:.5});
+document.querySelectorAll('.cnt').forEach(el=>co.observe(el));
+function runC(el){
+  const t=parseInt(el.dataset.t),s=performance.now();
+  (function f(n){const p=Math.min((n-s)/1500,1),v=Math.round((1-(1-p)**3)*t);el.textContent=v;if(p<1)requestAnimationFrame(f);})(s);
+}
+
+// ── UNIT PLAN TABS ───────────────────────────────────────────
+function switchUnit(i){
+  document.querySelectorAll('.utab').forEach((t,j)=>t.classList.toggle('act',j===i));
+  document.querySelectorAll('.uplan').forEach((p,j)=>p.classList.toggle('act',j===i));
+}
+
+// ── FLOOR PLAN TABS ──────────────────────────────────────────
+function switchFP(i){
+  document.querySelectorAll('.fptab').forEach((t,j)=>t.classList.toggle('act',j===i));
+  document.querySelectorAll('.fpplan').forEach((p,j)=>p.classList.toggle('act',j===i));
+}
+
+// ── 3D TILT ──────────────────────────────────────────────────
+document.querySelectorAll('.tilt').forEach(c=>{
+  c.addEventListener('mousemove',e=>{
+    const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+    c.style.transition='transform .08s';
+    c.style.transform=`perspective(900px) rotateX(${-y*8}deg) rotateY(${x*8}deg) translateZ(6px)`;
+  });
+  c.addEventListener('mouseleave',()=>{c.style.transition='transform .7s var(--ease)';c.style.transform='';});
+});
+
+// ── PARALLAX ────────────────────────────────────────────────
+window.addEventListener('scroll',()=>{
+  const fh=document.querySelector('.feat-hero img');
+  if(fh){const r=fh.closest('.feat-hero').getBoundingClientRect();if(r.top<innerHeight&&r.bottom>0)fh.style.transform=`translateY(${scrollY*.12}px)`;}
+},{passive:true});
+
+// form handled by WhatsApp block below
+
+// ── SMOOTH SCROLL ────────────────────────────────────────────
+document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{
+  const t=document.querySelector(a.getAttribute('href'));
+  if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth'});}
+}));
+
+// ── WHATSAPP ─────────────────────────────────────────────────
+const WA_NUM='919161718999';
+let waOpen=false;
+function toggleWA(){
+  waOpen=!waOpen;
+  document.getElementById('wa-panel').classList.toggle('open',waOpen);
+}
+function waMsg(txt){
+  const url='https://wa.me/'+WA_NUM+'?text='+encodeURIComponent(txt);
+  window.open(url,'_blank');
+}
+// Also wire up contact form redirect to WhatsApp
+document.getElementById('eform').addEventListener('submit',e=>{
+  e.preventDefault();
+  const nm=e.target.querySelector('input[type=text]').value||'';
+  const ph=e.target.querySelector('input[type=tel]').value||'';
+  const unit=e.target.querySelector('select').value||'';
+  const msg=`Hi Venkatesh! I'm ${nm}${ph?' ('+ph+')':''}. I'm interested in ${unit}. Please contact me.`;
+  document.getElementById('eform').style.display='none';
+  document.getElementById('fok').style.display='block';
+  setTimeout(()=>window.open('https://wa.me/'+WA_NUM+'?text='+encodeURIComponent(msg),'_blank'),800);
+});
+// Show panel after 8s if not already opened
+setTimeout(()=>{if(!waOpen)toggleWA();},8000);
+</script>
+</body>
+</html>

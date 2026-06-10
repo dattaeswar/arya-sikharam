@@ -1,0 +1,13 @@
+# screenshots (generated)
+preview_*.jpg
+
+# python
+__pycache__/
+*.pyc
+
+# system
+.DS_Store
+Thumbs.db
+
+# node (if ever added)
+node_modules/
